@@ -23,6 +23,10 @@ node {
        bat 'mvn test'   
       }
    }
+   stage('Build')
+   {
+    sh 'mvn clean install'
+   }
    /*
    stage('SonarQube Report Generation')
    {
